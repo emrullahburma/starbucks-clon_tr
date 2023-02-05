@@ -1,0 +1,269 @@
+body {
+  font-family: Gotham Screensmart Book, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 12px 4%;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 24%), 0 2px 2px 0 rgb(0 0 0 / 12%);
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 15px;
+}
+.navbar li {
+  padding: 0 10px;
+}
+.navbar li a {
+  text-decoration: none;
+  color: #3d3935;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+.navbar li a:hover {
+  color: rgb(56, 123, 66);
+}
+.logo {
+  width: 60px;
+  z-index: 1000;
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+.shopping-center {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.shopping {
+  padding: 7px 16px;
+  border-radius: 20px;
+  background-color: green;
+  font-weight: 600;
+  color: white;
+}
+.shopping:hover {
+  background-color: rgb(46, 168, 46);
+}
+.shopping:active {
+  transform: scale(0.9);
+}
+.login {
+  padding: 5px 13px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+.login:hover {
+  background-color: whitesmoke;
+}
+.login:active {
+  transform: scale(0.9);
+}
+.join {
+  padding: 7px 16px;
+  border-radius: 20px;
+  background-color: black;
+  font-weight: 600;
+  color: white;
+}
+.join:hover {
+  background-color: rgb(58, 58, 58);
+}
+.join:active {
+  transform: scale(0.9);
+}
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.content-left {
+  width: 35vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 110px 40px 20px 40px;
+  background-color: white;
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 24%), 0 2px 2px 0 rgb(0 0 0 / 12%);
+  z-index: -1;
+  overflow-x: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: ease 0.3s;
+}
+.content-left img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.content-right {
+  margin-left: 35vw;
+  padding: 20px 40px;
+  width: 100%;
+  transition: ease 0.3s;
+}
+.banner img {
+  width: 100%;
+}
+.text {
+  padding: 10px 30px;
+}
+.campain {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  width: 100%;
+  margin-top: 50px;
+}
+.campain-left img {
+  width: 100%;
+}
+.campain-right {
+  padding: 5px 20px;
+}
+.accord-menu {
+  padding: 10px 20px;
+  margin: 40px 0;
+  border-bottom: 1px solid gray;
+}
+.ust {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.menu {
+  margin: 20px 0;
+}
+.ust i {
+  font-size: 25px;
+  color: black;
+}
+.alt {
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+}
+.active {
+  min-height: 150px;
+}
+.alt a {
+  padding: 10px 0;
+  text-decoration: none;
+  color: gray;
+  margin-top: 10px;
+}
+.social-media {
+  display: flex;
+  align-items: center;
+}
+.social-media a {
+  margin: 0 10px;
+  color: black;
+}
+.footer-text {
+  display: flex;
+  flex-direction: column;
+}
+.footer-text a {
+  text-decoration: none;
+  color: black;
+  margin: 18px 0;
+}
+.burger-menu i {
+  font-size: 35px;
+  cursor: pointer;
+}
+.burger-menu {
+  display: none;
+  z-index: 1000;
+}
+@media screen and (max-width: 1420px) {
+  .content-left {
+    display: block;
+    position: static;
+    box-shadow: none;
+    width: 60%;
+    padding: 22px 40px 20px 40px;
+    margin: auto;
+  }
+  .content-right {
+    margin-left: 0px;
+  }
+  .content {
+    display: block;
+  }
+  .navbar-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 90px 10px 20px 15px;
+    border-bottom: 1px solid rgb(157, 157, 157);
+    width: 100vw;
+    height: 300px;
+    transition: ease 0.3s;
+    background-color: #fff;
+    transform: scale(0);
+  }
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: ease 0.3s;
+  }
+  .navbar li {
+    padding: 10px 0;
+  }
+  .burger-menu {
+    display: block;
+  }
+  .navbar-right {
+    display: none;
+  }
+  .active-menu {
+    transform: scale(100%);
+  }
+}
+@media screen and (max-width: 650px) {
+  .content-right {
+    padding: 20px 10px;
+    transition: ease 0.3s;
+  }
+  .content-left {
+    width: 70%;
+    transition: ease 0.3s;
+  }
+  .text {
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 440px) {
+  .campain-right {
+    padding: 10px 0px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .content-left {
+    width: 80%;
+    transition: ease 0.3s;
+  }
+}
